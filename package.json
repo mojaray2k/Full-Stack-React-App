@@ -4,6 +4,8 @@
   "description": "Full Stack PERN PostgreSQL Express React Node App",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix client",
     "server": "nodemon server"
   },
   "repository": {
