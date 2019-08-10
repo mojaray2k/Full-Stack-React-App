@@ -1,11 +1,14 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const db = require('./database');
 
 const ENV = process.env.NODE_ENV;
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 const app = express();
 app.use(express.json());
